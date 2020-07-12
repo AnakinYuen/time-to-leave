@@ -1,0 +1,34 @@
+.main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  min-height: $main-content-height;
+}
+
+.group {
+  position: relative;
+}
+
+$clock-width: 310px;
+
+.field {
+  width: 100%;
+  max-width: $clock-width;
+}
+
+$a: 963px;
+
+.card {
+  margin: 0.5rem 0;
+  width: $clock-width;
+
+  @media screen and (min-width: calc(#{($clock-width / 2 + $clock-width + 8px) * 2})) {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    right: 0;
+    transform: translate(calc(100% + 8px), -50%);
+  }
+}
