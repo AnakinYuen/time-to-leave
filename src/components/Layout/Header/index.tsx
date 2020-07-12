@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { Link } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 import { useMatch } from '@reach/router';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import DarkIcon from '@material-ui/icons/Brightness2';
@@ -44,7 +44,7 @@ const Header: React.FC<Props> = ({ siteTitle = '' }) => {
       const left = (screen.availWidth - width) / 2;
       const top = (screen.availHeight - height) / 2;
       window.open(
-        '/popup',
+        withPrefix('/popup'),
         '_blank',
         `titlebar=no,status=no,menubar=no,left=${left},top=${top},height=${height},width=${width}`,
       );

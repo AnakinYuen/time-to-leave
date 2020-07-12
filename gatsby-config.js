@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/time-to-leave',
   siteMetadata: {
     title: 'TTL',
     description: 'A simple alarm helps you countdown to the time to leave',

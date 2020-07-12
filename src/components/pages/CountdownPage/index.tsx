@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { navigate } from 'gatsby';
+import { navigate, withPrefix } from 'gatsby';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import EditIcon from '@material-ui/icons/Edit';
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) =>
 
 const popup = () => {
   const endingWindow = window.open(
-    '/end',
+    withPrefix('/end'),
     '_blank',
     `titlebar=no,status=no,menubar=no,left=0,top=0,height=${screen.availHeight},width=${screen.availWidth}`,
   );
