@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { useMatch } from '@reach/router';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
@@ -35,6 +35,21 @@ const useStyles = makeStyles((theme) =>
 const Header: React.FC<Props> = ({ siteTitle = '' }) => {
   const classes = useStyles();
   const { theme, toggleTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    const allowPopup = window.localStorage.getItem('allow-popup');
+    if (!allowPopup) {
+      const width = 200;
+      const height = 100;
+      const left = (screen.availWidth - width) / 2;
+      const top = (screen.availHeight - height) / 2;
+      window.open(
+        '/popup',
+        '_blank',
+        `titlebar=no,status=no,menubar=no,left=${left},top=${top},height=${height},width=${width}`,
+      );
+    }
+  }, []);
 
   return (
     <header className={`${classes.header} ${style.header}`}>
