@@ -4,4 +4,8 @@ exports.onCreatePage = async ({ page, actions }) => {
     page.matchPath = '/countdown/*';
     createPage(page);
   }
+  if (page.path.match(/^\/edit/)) {
+    page.matchPath = '/edit/*';
+    createPage(page);
+  }
 };
