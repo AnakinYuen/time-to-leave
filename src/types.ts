@@ -3,3 +3,5 @@ export interface SiteMetadata {
   description: string;
   author: string;
 }
+
+export type Mode = 'arrive' | 'leave';
