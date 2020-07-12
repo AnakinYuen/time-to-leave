@@ -10,6 +10,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
+        data: `@use './src/scss/variables.scss' as *;`,
         implementation: require('sass'),
       },
     },
