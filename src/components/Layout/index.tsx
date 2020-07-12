@@ -9,10 +9,12 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Required } from 'utility-types';
 import { SiteMetadata } from 'src/types';
-import Header from 'src/components/header';
-import './layout.scss';
+import Header from './Header';
+import './unify.scss';
+import './theme.scss';
 
-type Props = Required<React.Props<unknown>, 'children'>;
+type Props = Required<React.Props<unknown>, 'children'> &
+  React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
 
 interface Query {
   site: {
@@ -20,7 +22,7 @@ interface Query {
   };
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC<Props> = ({ children, ...mainProps }) => {
   const data = useStaticQuery<Query>(graphql`
     query SiteTitleQuery {
       site {
@@ -34,20 +36,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <main {...mainProps}>{children}</main>
     </>
   );
 };
