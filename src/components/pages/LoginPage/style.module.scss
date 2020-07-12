@@ -1,0 +1,31 @@
+.main {
+  min-height: $main-content-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.h1,
+.h2 {
+  font-weight: normal;
+  margin-bottom: 0.1rem;
+}
+
+.h2 {
+  margin-bottom: 1rem;
+}
+
+.password {
+  margin-bottom: 0.5rem;
+}
