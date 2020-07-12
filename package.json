@@ -24,10 +24,12 @@
     "gatsby-plugin-offline": "^3.2.13",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-transformer-sharp": "^2.5.7",
     "prettier": "^2.0.5",
+    "sass": "^1.26.10",
     "typescript": "^3.9.6",
     "utility-types": "^3.10.0"
   },

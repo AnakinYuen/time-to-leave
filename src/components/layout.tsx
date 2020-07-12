@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { Required } from 'utility-types';
 import { SiteMetadata } from 'src/types';
 import Header from 'src/components/header';
-import './layout.css';
+import './layout.scss';
 
 type Props = Required<React.Props<unknown>, 'children'>;
 
