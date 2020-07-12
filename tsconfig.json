@@ -24,6 +24,6 @@
     "noImplicitThis": true,
     "strictNullChecks": true
   },
-  "include": ["src"],
+  "include": ["src", "src/react-app-env.d.ts"],
   "exclude": ["node_modules", "**/node_modules/*"]
 }
