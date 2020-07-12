@@ -8,4 +8,8 @@ exports.onCreatePage = async ({ page, actions }) => {
     page.matchPath = '/edit/*';
     createPage(page);
   }
+  if (page.path.match(/^\/login/)) {
+    page.matchPath = '/login/*';
+    createPage(page);
+  }
 };
