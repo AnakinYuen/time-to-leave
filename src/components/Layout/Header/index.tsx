@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'gatsby';
+import { useMatch } from '@reach/router';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import DarkIcon from '@material-ui/icons/Brightness2';
 import LightIcon from '@material-ui/icons/Brightness7';
+import ExtensionIcon from '@material-ui/icons/Extension';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import { ThemeContext } from 'src/providers/theme';
@@ -43,6 +45,16 @@ const Header: React.FC<Props> = ({ siteTitle = '' }) => {
             {siteTitle}
           </Link>
         </h1>
+        {useMatch('/set-arrive') || useMatch('/set-leave') ? (
+          <IconButton
+            color="primary"
+            className={classes.colorPrimary}
+            aria-label="extension"
+            disabled
+          >
+            <ExtensionIcon />
+          </IconButton>
+        ) : null}
         <Tooltip title="Toggle light/dark theme" placement="bottom">
           <IconButton
             color="primary"
