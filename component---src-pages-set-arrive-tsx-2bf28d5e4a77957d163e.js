@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{pgMI:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),r=t.n(a),o=t("+uCX");n.default=function(){return r.a.createElement(o.a,{mode:"arrive"})}}}]);
+//# sourceMappingURL=component---src-pages-set-arrive-tsx-2bf28d5e4a77957d163e.js.map
