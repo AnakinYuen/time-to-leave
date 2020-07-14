@@ -1,6 +1,6 @@
 {
   "name": "time-to-leave",
-  "description": "",
+  "description": "A simple alarm helps you countdown to the time to leave",
   "version": "0.0.1",
   "author": "Anakin Yuen",
   "dependencies": {
